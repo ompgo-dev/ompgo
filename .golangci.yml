@@ -1,0 +1,58 @@
+run:
+  timeout: 5m
+  tests: true
+
+linters:
+  enable:
+    - errcheck      # Check for unchecked errors
+    - gosimple      # Simplify code
+    - govet         # Vet examines Go source code
+    - ineffassign   # Detect ineffectual assignments
+    - staticcheck   # Go static analysis
+    - unused        # Check for unused code
+    - gofmt         # Check formatting
+    - goimports     # Check import formatting
+    - misspell      # Check for misspelled words
+    - goconst       # Find repeated strings that could be constants
+    - unconvert     # Remove unnecessary type conversions
+    - unparam       # Find unused function parameters
+    - prealloc      # Find slice declarations that could be preallocated
+    - exportloopref # Check for loop variable references
+    - nilerr        # Find nil error returns
+    - nolintlint    # Ensure nolint directives are valid
+
+linters-settings:
+  gofmt:
+    simplify: true
+  
+  govet:
+    check-shadowing: true
+    enable-all: true
+  
+  errcheck:
+    check-type-assertions: true
+    check-blank: true
+  
+  staticcheck:
+    checks: ["all"]
+
+issues:
+  exclude-rules:
+    # Exclude certain linters for test files
+    - path: _test\.go
+      linters:
+        - errcheck
+        - unparam
+    
+    # Exclude CGO-related issues
+    - path: pkg/runtime/capi\.go
+      linters:
+        - govet
+    
+    # Exclude generated code
+    - path: _gen\.go
+      linters:
+        - all
+
+  max-issues-per-linter: 0
+  max-same-issues: 0

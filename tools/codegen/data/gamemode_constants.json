@@ -1,0 +1,1712 @@
+{
+    "version": 2,
+    "comments": {
+        "source": "Manually sourced from https://github.com/openmultiplayer/omp-stdlib.",
+        "maintenance": "We will update this file when upstream constants change."
+    },
+    "groups": [
+        {
+            "name": "DisconnectReason",
+            "type": "enum",
+            "comment": "Reasons a player disconnected.",
+            "items": [
+                {
+                    "name": "DisconnectReasonTimeout",
+                    "value": 0
+                },
+                {
+                    "name": "DisconnectReasonQuit",
+                    "value": 1
+                },
+                {
+                    "name": "DisconnectReasonKicked",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "name": "WeaponID",
+            "type": "enum",
+            "comment": "Weapon identifiers.",
+            "items": [
+                {
+                    "name": "WeaponFist",
+                    "value": 0
+                },
+                {
+                    "name": "WeaponBrassKnuckles",
+                    "value": 1
+                },
+                {
+                    "name": "WeaponGolfClub",
+                    "value": 2
+                },
+                {
+                    "name": "WeaponNitestick",
+                    "value": 3
+                },
+                {
+                    "name": "WeaponKnife",
+                    "value": 4
+                },
+                {
+                    "name": "WeaponBat",
+                    "value": 5
+                },
+                {
+                    "name": "WeaponShovel",
+                    "value": 6
+                },
+                {
+                    "name": "WeaponPoolStick",
+                    "value": 7
+                },
+                {
+                    "name": "WeaponKatana",
+                    "value": 8
+                },
+                {
+                    "name": "WeaponChainsaw",
+                    "value": 9
+                },
+                {
+                    "name": "WeaponDildo",
+                    "value": 10
+                },
+                {
+                    "name": "WeaponDildo2",
+                    "value": 11
+                },
+                {
+                    "name": "WeaponVibrator",
+                    "value": 12
+                },
+                {
+                    "name": "WeaponVibrator2",
+                    "value": 13
+                },
+                {
+                    "name": "WeaponFlowers",
+                    "value": 14
+                },
+                {
+                    "name": "WeaponCane",
+                    "value": 15
+                },
+                {
+                    "name": "WeaponGrenade",
+                    "value": 16
+                },
+                {
+                    "name": "WeaponTeargas",
+                    "value": 17
+                },
+                {
+                    "name": "WeaponMolotov",
+                    "value": 18
+                },
+                {
+                    "name": "WeaponColt45",
+                    "value": 22
+                },
+                {
+                    "name": "WeaponSilenced",
+                    "value": 23
+                },
+                {
+                    "name": "WeaponDeagle",
+                    "value": 24
+                },
+                {
+                    "name": "WeaponShotgun",
+                    "value": 25
+                },
+                {
+                    "name": "WeaponSawedoff",
+                    "value": 26
+                },
+                {
+                    "name": "WeaponCombatShotgun",
+                    "value": 27
+                },
+                {
+                    "name": "WeaponUzi",
+                    "value": 28
+                },
+                {
+                    "name": "WeaponMP5",
+                    "value": 29
+                },
+                {
+                    "name": "WeaponAK47",
+                    "value": 30
+                },
+                {
+                    "name": "WeaponM4",
+                    "value": 31
+                },
+                {
+                    "name": "WeaponTec9",
+                    "value": 32
+                },
+                {
+                    "name": "WeaponRifle",
+                    "value": 33
+                },
+                {
+                    "name": "WeaponSniper",
+                    "value": 34
+                },
+                {
+                    "name": "WeaponRPG",
+                    "value": 35
+                },
+                {
+                    "name": "WeaponHeatseeker",
+                    "value": 36
+                },
+                {
+                    "name": "WeaponFlamethrower",
+                    "value": 37
+                },
+                {
+                    "name": "WeaponMinigun",
+                    "value": 38
+                },
+                {
+                    "name": "WeaponSatchel",
+                    "value": 39
+                },
+                {
+                    "name": "WeaponBomb",
+                    "value": 40
+                },
+                {
+                    "name": "WeaponSpraycan",
+                    "value": 41
+                },
+                {
+                    "name": "WeaponFireExtinguisher",
+                    "value": 42
+                },
+                {
+                    "name": "WeaponCamera",
+                    "value": 43
+                },
+                {
+                    "name": "WeaponNightVisionGoggles",
+                    "value": 44
+                },
+                {
+                    "name": "WeaponThermalGoggles",
+                    "value": 45
+                },
+                {
+                    "name": "WeaponParachute",
+                    "value": 46
+                },
+                {
+                    "name": "WeaponVehicle",
+                    "value": 49
+                },
+                {
+                    "name": "WeaponDrown",
+                    "value": 53
+                },
+                {
+                    "name": "WeaponCollision",
+                    "value": 54
+                }
+            ]
+        },
+        {
+            "name": "Keys",
+            "type": "bitflags",
+            "comment": "Bitmask values for player key states.",
+            "items": [
+                {
+                    "name": "KeyNone",
+                    "value": 0
+                },
+                {
+                    "name": "KeyAction",
+                    "value": 1
+                },
+                {
+                    "name": "KeyCrouch",
+                    "value": 2
+                },
+                {
+                    "name": "KeyFire",
+                    "value": 4
+                },
+                {
+                    "name": "KeySprint",
+                    "value": 8
+                },
+                {
+                    "name": "KeySecondaryAttack",
+                    "value": 16
+                },
+                {
+                    "name": "KeyJump",
+                    "value": 32
+                },
+                {
+                    "name": "KeyLookRight",
+                    "value": 64
+                },
+                {
+                    "name": "KeyHandbrake",
+                    "value": 128
+                },
+                {
+                    "name": "KeyAim",
+                    "value": 128
+                },
+                {
+                    "name": "KeyLookLeft",
+                    "value": 256
+                },
+                {
+                    "name": "KeySubmission",
+                    "value": 512
+                },
+                {
+                    "name": "KeyLookBehind",
+                    "value": 512
+                },
+                {
+                    "name": "KeyWalk",
+                    "value": 1024
+                },
+                {
+                    "name": "KeyAnalogUp",
+                    "value": 2048
+                },
+                {
+                    "name": "KeyAnalogDown",
+                    "value": 4096
+                },
+                {
+                    "name": "KeyAnalogLeft",
+                    "value": 8192
+                },
+                {
+                    "name": "KeyAnalogRight",
+                    "value": 16384
+                },
+                {
+                    "name": "KeyYes",
+                    "value": 65536
+                },
+                {
+                    "name": "KeyNo",
+                    "value": 131072
+                },
+                {
+                    "name": "KeyCtrlBack",
+                    "value": 262144
+                }
+            ]
+        },
+        {
+            "name": "WeaponSlot",
+            "type": "enum",
+            "comment": "Weapon slot identifiers.",
+            "items": [
+                {
+                    "name": "WeaponSlotUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "WeaponSlotUnarmed",
+                    "value": 0
+                },
+                {
+                    "name": "WeaponSlotMelee",
+                    "value": 1
+                },
+                {
+                    "name": "WeaponSlotPistol",
+                    "value": 2
+                },
+                {
+                    "name": "WeaponSlotShotgun",
+                    "value": 3
+                },
+                {
+                    "name": "WeaponSlotMachineGun",
+                    "value": 4
+                },
+                {
+                    "name": "WeaponSlotAssaultRifle",
+                    "value": 5
+                },
+                {
+                    "name": "WeaponSlotLongRifle",
+                    "value": 6
+                },
+                {
+                    "name": "WeaponSlotArtillery",
+                    "value": 7
+                },
+                {
+                    "name": "WeaponSlotExplosives",
+                    "value": 8
+                },
+                {
+                    "name": "WeaponSlotEquipment",
+                    "value": 9
+                },
+                {
+                    "name": "WeaponSlotGift",
+                    "value": 10
+                },
+                {
+                    "name": "WeaponSlotGadget",
+                    "value": 11
+                },
+                {
+                    "name": "WeaponSlotDetonator",
+                    "value": 12
+                }
+            ]
+        },
+        {
+            "name": "PlayerState",
+            "type": "enum",
+            "comment": "Player state identifiers.",
+            "items": [
+                {
+                    "name": "PlayerStateUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "PlayerStateNone",
+                    "value": 0
+                },
+                {
+                    "name": "PlayerStateOnFoot",
+                    "value": 1
+                },
+                {
+                    "name": "PlayerStateDriver",
+                    "value": 2
+                },
+                {
+                    "name": "PlayerStatePassenger",
+                    "value": 3
+                },
+                {
+                    "name": "PlayerStateWasted",
+                    "value": 7
+                },
+                {
+                    "name": "PlayerStateSpawned",
+                    "value": 8
+                },
+                {
+                    "name": "PlayerStateSpectating",
+                    "value": 9
+                }
+            ]
+        },
+        {
+            "name": "SpecialAction",
+            "type": "enum",
+            "comment": "Special action identifiers.",
+            "items": [
+                {
+                    "name": "SpecialActionUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "SpecialActionNone",
+                    "value": 0
+                },
+                {
+                    "name": "SpecialActionDuck",
+                    "value": 1
+                },
+                {
+                    "name": "SpecialActionUseJetpack",
+                    "value": 2
+                },
+                {
+                    "name": "SpecialActionEnterVehicle",
+                    "value": 3
+                },
+                {
+                    "name": "SpecialActionExitVehicle",
+                    "value": 4
+                },
+                {
+                    "name": "SpecialActionDance1",
+                    "value": 5
+                },
+                {
+                    "name": "SpecialActionDance2",
+                    "value": 6
+                },
+                {
+                    "name": "SpecialActionDance3",
+                    "value": 7
+                },
+                {
+                    "name": "SpecialActionDance4",
+                    "value": 8
+                },
+                {
+                    "name": "SpecialActionHandsUp",
+                    "value": 10
+                },
+                {
+                    "name": "SpecialActionUseCellphone",
+                    "value": 11
+                },
+                {
+                    "name": "SpecialActionSitting",
+                    "value": 12
+                },
+                {
+                    "name": "SpecialActionStopUseCellphone",
+                    "value": 13
+                },
+                {
+                    "name": "SpecialActionDrinkBeer",
+                    "value": 20
+                },
+                {
+                    "name": "SpecialActionSmokeCiggy",
+                    "value": 21
+                },
+                {
+                    "name": "SpecialActionDrinkWine",
+                    "value": 22
+                },
+                {
+                    "name": "SpecialActionDrinkSprunk",
+                    "value": 23
+                },
+                {
+                    "name": "SpecialActionCuffed",
+                    "value": 24
+                },
+                {
+                    "name": "SpecialActionCarry",
+                    "value": 25
+                },
+                {
+                    "name": "SpecialActionPissing",
+                    "value": 68
+                }
+            ]
+        },
+        {
+            "name": "FightStyle",
+            "type": "enum",
+            "comment": "Hand-to-hand fight styles.",
+            "items": [
+                {
+                    "name": "FightStyleUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "FightStyleNormal",
+                    "value": 4
+                },
+                {
+                    "name": "FightStyleBoxing",
+                    "value": 5
+                },
+                {
+                    "name": "FightStyleKungFu",
+                    "value": 6
+                },
+                {
+                    "name": "FightStyleKneehead",
+                    "value": 7
+                },
+                {
+                    "name": "FightStyleGrabkick",
+                    "value": 15
+                },
+                {
+                    "name": "FightStyleElbow",
+                    "value": 16
+                }
+            ]
+        },
+        {
+            "name": "WeaponSkill",
+            "type": "enum",
+            "comment": "Weapon skill identifiers.",
+            "items": [
+                {
+                    "name": "WeaponSkillUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "WeaponSkillPistol",
+                    "value": 0
+                },
+                {
+                    "name": "WeaponSkillPistolSilenced",
+                    "value": 1
+                },
+                {
+                    "name": "WeaponSkillDesertEagle",
+                    "value": 2
+                },
+                {
+                    "name": "WeaponSkillShotgun",
+                    "value": 3
+                },
+                {
+                    "name": "WeaponSkillSawnoffShotgun",
+                    "value": 4
+                },
+                {
+                    "name": "WeaponSkillSpas12Shotgun",
+                    "value": 5
+                },
+                {
+                    "name": "WeaponSkillMicroUzi",
+                    "value": 6
+                },
+                {
+                    "name": "WeaponSkillMP5",
+                    "value": 7
+                },
+                {
+                    "name": "WeaponSkillAK47",
+                    "value": 8
+                },
+                {
+                    "name": "WeaponSkillM4",
+                    "value": 9
+                },
+                {
+                    "name": "WeaponSkillSniperRifle",
+                    "value": 10
+                }
+            ]
+        },
+        {
+            "name": "WeaponState",
+            "type": "enum",
+            "comment": "Weapon state identifiers.",
+            "items": [
+                {
+                    "name": "WeaponStateUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "WeaponStateNoBullets",
+                    "value": 0
+                },
+                {
+                    "name": "WeaponStateLastBullet",
+                    "value": 1
+                },
+                {
+                    "name": "WeaponStateMoreBullets",
+                    "value": 2
+                },
+                {
+                    "name": "WeaponStateReloading",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "name": "CameraMoveType",
+            "type": "enum",
+            "comment": "Camera move types.",
+            "items": [
+                {
+                    "name": "CameraMoveUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "CameraMove",
+                    "value": 1
+                },
+                {
+                    "name": "CameraCut",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "name": "CameraMode",
+            "type": "enum",
+            "comment": "Camera mode identifiers.",
+            "items": [
+                {
+                    "name": "CameraModeDisconnected",
+                    "value": -1
+                },
+                {
+                    "name": "CameraModeNone",
+                    "value": 0
+                },
+                {
+                    "name": "CameraModeBehindCar",
+                    "value": 3
+                },
+                {
+                    "name": "CameraModeFollowPed",
+                    "value": 4
+                },
+                {
+                    "name": "CameraModeSniper",
+                    "value": 7
+                },
+                {
+                    "name": "CameraModeRocketLauncher",
+                    "value": 8
+                },
+                {
+                    "name": "CameraModeFixed",
+                    "value": 15
+                },
+                {
+                    "name": "CameraModeFirstPerson",
+                    "value": 16
+                },
+                {
+                    "name": "CameraModeCamOnAString",
+                    "value": 18
+                },
+                {
+                    "name": "CameraModeBehindBoat",
+                    "value": 22
+                },
+                {
+                    "name": "CameraModeCamera",
+                    "value": 46
+                },
+                {
+                    "name": "CameraModeRocketLauncherHS",
+                    "value": 51
+                },
+                {
+                    "name": "CameraModeAimWeapon",
+                    "value": 53
+                },
+                {
+                    "name": "CameraModeAimWeaponFromCar",
+                    "value": 55
+                },
+                {
+                    "name": "CameraModeDwHeliChase",
+                    "value": 56
+                }
+            ]
+        },
+        {
+            "name": "MapIconStyle",
+            "type": "enum",
+            "comment": "Map icon display styles.",
+            "items": [
+                {
+                    "name": "MapIconStyleUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "MapIconLocal",
+                    "value": 0
+                },
+                {
+                    "name": "MapIconGlobal",
+                    "value": 1
+                },
+                {
+                    "name": "MapIconLocalCheckpoint",
+                    "value": 2
+                },
+                {
+                    "name": "MapIconGlobalCheckpoint",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "name": "PlayerMarkersMode",
+            "type": "enum",
+            "comment": "Player marker display modes.",
+            "items": [
+                {
+                    "name": "PlayerMarkersModeUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "PlayerMarkersModeOff",
+                    "value": 0
+                },
+                {
+                    "name": "PlayerMarkersModeGlobal",
+                    "value": 1
+                },
+                {
+                    "name": "PlayerMarkersModeStreamed",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "name": "SpectateMode",
+            "type": "enum",
+            "comment": "Spectate mode identifiers.",
+            "items": [
+                {
+                    "name": "SpectateModeUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "SpectateModeNormal",
+                    "value": 1
+                },
+                {
+                    "name": "SpectateModeFixed",
+                    "value": 2
+                },
+                {
+                    "name": "SpectateModeSide",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "name": "PlayerRecordingType",
+            "type": "enum",
+            "comment": "Player recording types for NPC playback.",
+            "items": [
+                {
+                    "name": "PlayerRecordingTypeUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "PlayerRecordingTypeNone",
+                    "value": 0
+                },
+                {
+                    "name": "PlayerRecordingTypeDriver",
+                    "value": 1
+                },
+                {
+                    "name": "PlayerRecordingTypeOnFoot",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "name": "NPCMoveType",
+            "type": "enum",
+            "comment": "NPC movement types.",
+            "items": [
+                {
+                    "name": "NPCMoveTypeUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "NPCMoveTypeNone",
+                    "value": 0
+                },
+                {
+                    "name": "NPCMoveTypeWalk",
+                    "value": 1
+                },
+                {
+                    "name": "NPCMoveTypeJog",
+                    "value": 2
+                },
+                {
+                    "name": "NPCMoveTypeSprint",
+                    "value": 3
+                },
+                {
+                    "name": "NPCMoveTypeDrive",
+                    "value": 4
+                },
+                {
+                    "name": "NPCMoveTypeAuto",
+                    "value": 5
+                }
+            ]
+        },
+        {
+            "name": "NPCEntityCheck",
+            "type": "bitflags",
+            "comment": "NPC entity check flags.",
+            "items": [
+                {
+                    "name": "NPCEntityCheckNone",
+                    "value": 0
+                },
+                {
+                    "name": "NPCEntityCheckPlayer",
+                    "value": 1
+                },
+                {
+                    "name": "NPCEntityCheckNPC",
+                    "value": 2
+                },
+                {
+                    "name": "NPCEntityCheckActor",
+                    "value": 4
+                },
+                {
+                    "name": "NPCEntityCheckVehicle",
+                    "value": 8
+                },
+                {
+                    "name": "NPCEntityCheckObject",
+                    "value": 16
+                },
+                {
+                    "name": "NPCEntityCheckPObjectOrig",
+                    "value": 32
+                },
+                {
+                    "name": "NPCEntityCheckPObjectTarg",
+                    "value": 64
+                },
+                {
+                    "name": "NPCEntityCheckMap",
+                    "value": 128
+                },
+                {
+                    "name": "NPCEntityCheckAll",
+                    "value": 255
+                }
+            ]
+        },
+        {
+            "name": "ForceSync",
+            "type": "enum",
+            "comment": "Forced sync targets for animations.",
+            "items": [
+                {
+                    "name": "ForceSyncUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "ForceSyncNone",
+                    "value": 0
+                },
+                {
+                    "name": "ForceSyncAll",
+                    "value": 1
+                },
+                {
+                    "name": "ForceSyncOther",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "name": "ClickSource",
+            "type": "enum",
+            "comment": "Sources for click callbacks.",
+            "items": [
+                {
+                    "name": "ClickSourceUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "ClickSourceScoreboard",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "name": "BulletHitType",
+            "type": "enum",
+            "comment": "Bullet hit types for OnPlayerWeaponShot.",
+            "items": [
+                {
+                    "name": "BulletHitTypeUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "BulletHitTypeNone",
+                    "value": 0
+                },
+                {
+                    "name": "BulletHitTypePlayer",
+                    "value": 1
+                },
+                {
+                    "name": "BulletHitTypeVehicle",
+                    "value": 2
+                },
+                {
+                    "name": "BulletHitTypeObject",
+                    "value": 3
+                },
+                {
+                    "name": "BulletHitTypePlayerObject",
+                    "value": 4
+                }
+            ]
+        },
+        {
+            "name": "CheckpointType",
+            "type": "enum",
+            "comment": "Checkpoint and race checkpoint marker types.",
+            "items": [
+                {
+                    "name": "CheckpointTypeUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "CheckpointTypeGroundNormal",
+                    "value": 0
+                },
+                {
+                    "name": "CheckpointTypeGroundFinish",
+                    "value": 1
+                },
+                {
+                    "name": "CheckpointTypeGroundEmpty",
+                    "value": 2
+                },
+                {
+                    "name": "CheckpointTypeAirNormal",
+                    "value": 3
+                },
+                {
+                    "name": "CheckpointTypeAirFinish",
+                    "value": 4
+                },
+                {
+                    "name": "CheckpointTypeAirRotating",
+                    "value": 5
+                },
+                {
+                    "name": "CheckpointTypeAirStrobing",
+                    "value": 6
+                },
+                {
+                    "name": "CheckpointTypeAirSwinging",
+                    "value": 7
+                },
+                {
+                    "name": "CheckpointTypeAirBobbing",
+                    "value": 8
+                }
+            ]
+        },
+        {
+            "name": "DialogStyle",
+            "type": "enum",
+            "comment": "Dialog style identifiers.",
+            "items": [
+                {
+                    "name": "DialogStyleUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "DialogStyleMsgBox",
+                    "value": 0
+                },
+                {
+                    "name": "DialogStyleInput",
+                    "value": 1
+                },
+                {
+                    "name": "DialogStyleList",
+                    "value": 2
+                },
+                {
+                    "name": "DialogStylePassword",
+                    "value": 3
+                },
+                {
+                    "name": "DialogStyleTablist",
+                    "value": 4
+                },
+                {
+                    "name": "DialogStyleTablistHeaders",
+                    "value": 5
+                }
+            ]
+        },
+        {
+            "name": "TextDrawFont",
+            "type": "enum",
+            "comment": "Text draw font identifiers.",
+            "items": [
+                {
+                    "name": "TextDrawFontUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "TextDrawFont0",
+                    "value": 0
+                },
+                {
+                    "name": "TextDrawFont1",
+                    "value": 1
+                },
+                {
+                    "name": "TextDrawFont2",
+                    "value": 2
+                },
+                {
+                    "name": "TextDrawFont3",
+                    "value": 3
+                },
+                {
+                    "name": "TextDrawFontSpriteDraw",
+                    "value": 4
+                },
+                {
+                    "name": "TextDrawFontModelPreview",
+                    "value": 5
+                },
+                {
+                    "name": "TextDrawFontBank",
+                    "value": 0
+                },
+                {
+                    "name": "TextDrawFontStandard",
+                    "value": 1
+                },
+                {
+                    "name": "TextDrawFontSpaceage",
+                    "value": 2
+                },
+                {
+                    "name": "TextDrawFontHeading",
+                    "value": 3
+                },
+                {
+                    "name": "TextDrawFontBeckettRegular",
+                    "value": 0
+                },
+                {
+                    "name": "TextDrawFontAharoniBold",
+                    "value": 1
+                },
+                {
+                    "name": "TextDrawFontBankGothic",
+                    "value": 2
+                },
+                {
+                    "name": "TextDrawFontPricedown",
+                    "value": 3
+                },
+                {
+                    "name": "TextDrawFontSprite",
+                    "value": 4
+                },
+                {
+                    "name": "TextDrawFontPreview",
+                    "value": 5
+                }
+            ]
+        },
+        {
+            "name": "TextDrawAlign",
+            "type": "enum",
+            "comment": "Text draw alignment identifiers.",
+            "items": [
+                {
+                    "name": "TextDrawAlignUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "TextDrawAlignLeft",
+                    "value": 1
+                },
+                {
+                    "name": "TextDrawAlignCentre",
+                    "value": 2
+                },
+                {
+                    "name": "TextDrawAlignCenter",
+                    "value": 2
+                },
+                {
+                    "name": "TextDrawAlignRight",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "name": "SelectObjectType",
+            "type": "enum",
+            "comment": "Object selection types.",
+            "items": [
+                {
+                    "name": "SelectObjectUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "SelectObjectGlobalObject",
+                    "value": 1
+                },
+                {
+                    "name": "SelectObjectPlayerObject",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "name": "ObjectMaterialSize",
+            "type": "enum",
+            "comment": "Object material texture sizes.",
+            "items": [
+                {
+                    "name": "ObjectMaterialSizeUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "ObjectMaterialSize32x32",
+                    "value": 10
+                },
+                {
+                    "name": "ObjectMaterialSize64x32",
+                    "value": 20
+                },
+                {
+                    "name": "ObjectMaterialSize64x64",
+                    "value": 30
+                },
+                {
+                    "name": "ObjectMaterialSize128x32",
+                    "value": 40
+                },
+                {
+                    "name": "ObjectMaterialSize128x64",
+                    "value": 50
+                },
+                {
+                    "name": "ObjectMaterialSize128x128",
+                    "value": 60
+                },
+                {
+                    "name": "ObjectMaterialSize256x32",
+                    "value": 70
+                },
+                {
+                    "name": "ObjectMaterialSize256x64",
+                    "value": 80
+                },
+                {
+                    "name": "ObjectMaterialSize256x128",
+                    "value": 90
+                },
+                {
+                    "name": "ObjectMaterialSize256x256",
+                    "value": 100
+                },
+                {
+                    "name": "ObjectMaterialSize512x64",
+                    "value": 110
+                },
+                {
+                    "name": "ObjectMaterialSize512x128",
+                    "value": 120
+                },
+                {
+                    "name": "ObjectMaterialSize512x256",
+                    "value": 130
+                },
+                {
+                    "name": "ObjectMaterialSize512x512",
+                    "value": 140
+                }
+            ]
+        },
+        {
+            "name": "ObjectMaterialTextAlign",
+            "type": "enum",
+            "comment": "Object material text alignment identifiers.",
+            "items": [
+                {
+                    "name": "ObjectMaterialTextAlignUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "ObjectMaterialTextAlignLeft",
+                    "value": 0
+                },
+                {
+                    "name": "ObjectMaterialTextAlignCentre",
+                    "value": 1
+                },
+                {
+                    "name": "ObjectMaterialTextAlignCenter",
+                    "value": 1
+                },
+                {
+                    "name": "ObjectMaterialTextAlignRight",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "name": "EditResponse",
+            "type": "enum",
+            "comment": "Object edit response identifiers.",
+            "items": [
+                {
+                    "name": "EditResponseUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "EditResponseCancel",
+                    "value": 0
+                },
+                {
+                    "name": "EditResponseFinal",
+                    "value": 1
+                },
+                {
+                    "name": "EditResponseUpdate",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "name": "CarModType",
+            "type": "enum",
+            "comment": "Vehicle mod slot identifiers.",
+            "items": [
+                {
+                    "name": "CarModTypeNone",
+                    "value": -1
+                },
+                {
+                    "name": "CarModTypeSpoiler",
+                    "value": 0
+                },
+                {
+                    "name": "CarModTypeHood",
+                    "value": 1
+                },
+                {
+                    "name": "CarModTypeRoof",
+                    "value": 2
+                },
+                {
+                    "name": "CarModTypeSideskirt",
+                    "value": 3
+                },
+                {
+                    "name": "CarModTypeLamps",
+                    "value": 4
+                },
+                {
+                    "name": "CarModTypeNitro",
+                    "value": 5
+                },
+                {
+                    "name": "CarModTypeExhaust",
+                    "value": 6
+                },
+                {
+                    "name": "CarModTypeWheels",
+                    "value": 7
+                },
+                {
+                    "name": "CarModTypeStereo",
+                    "value": 8
+                },
+                {
+                    "name": "CarModTypeHydraulics",
+                    "value": 9
+                },
+                {
+                    "name": "CarModTypeFrontBumper",
+                    "value": 10
+                },
+                {
+                    "name": "CarModTypeRearBumper",
+                    "value": 11
+                },
+                {
+                    "name": "CarModTypeVentRight",
+                    "value": 12
+                },
+                {
+                    "name": "CarModTypeVentLeft",
+                    "value": 13
+                },
+                {
+                    "name": "CarModTypeFrontBullbar",
+                    "value": 14
+                },
+                {
+                    "name": "CarModTypeRearBullbar",
+                    "value": 15
+                }
+            ]
+        },
+        {
+            "name": "VehicleModelInfo",
+            "type": "enum",
+            "comment": "Vehicle model info identifiers.",
+            "items": [
+                {
+                    "name": "VehicleModelInfoUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "VehicleModelInfoSize",
+                    "value": 1
+                },
+                {
+                    "name": "VehicleModelInfoFrontSeat",
+                    "value": 2
+                },
+                {
+                    "name": "VehicleModelInfoRearSeat",
+                    "value": 3
+                },
+                {
+                    "name": "VehicleModelInfoPetrolCap",
+                    "value": 4
+                },
+                {
+                    "name": "VehicleModelInfoWheelsFront",
+                    "value": 5
+                },
+                {
+                    "name": "VehicleModelInfoWheelsRear",
+                    "value": 6
+                },
+                {
+                    "name": "VehicleModelInfoWheelsMid",
+                    "value": 7
+                },
+                {
+                    "name": "VehicleModelInfoFrontBumper",
+                    "value": 8
+                },
+                {
+                    "name": "VehicleModelInfoRearBumper",
+                    "value": 9
+                }
+            ]
+        },
+        {
+            "name": "VehiclePanelStatus",
+            "type": "enum",
+            "comment": "Vehicle panel damage status values.",
+            "items": [
+                {
+                    "name": "VehiclePanelStatusUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "VehiclePanelStatusNone",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "name": "VehicleDoorStatus",
+            "type": "bitflags",
+            "comment": "Vehicle door damage status flags.",
+            "items": [
+                {
+                    "name": "VehicleDoorStatusNone",
+                    "value": 0
+                },
+                {
+                    "name": "VehicleDoorStatusBonnetOpen",
+                    "value": 1
+                },
+                {
+                    "name": "VehicleDoorStatusBonnetDamaged",
+                    "value": 2
+                },
+                {
+                    "name": "VehicleDoorStatusBonnetMissing",
+                    "value": 4
+                },
+                {
+                    "name": "VehicleDoorStatusBootOpen",
+                    "value": 256
+                },
+                {
+                    "name": "VehicleDoorStatusBootDamaged",
+                    "value": 512
+                },
+                {
+                    "name": "VehicleDoorStatusBootMissing",
+                    "value": 1024
+                },
+                {
+                    "name": "VehicleDoorStatusFrontLeftOpen",
+                    "value": 65536
+                },
+                {
+                    "name": "VehicleDoorStatusFrontLeftDamaged",
+                    "value": 131072
+                },
+                {
+                    "name": "VehicleDoorStatusFrontLeftMissing",
+                    "value": 262144
+                },
+                {
+                    "name": "VehicleDoorStatusFrontRightOpen",
+                    "value": 16777216
+                },
+                {
+                    "name": "VehicleDoorStatusFrontRightDamaged",
+                    "value": 33554432
+                },
+                {
+                    "name": "VehicleDoorStatusFrontRightMissing",
+                    "value": 67108864
+                }
+            ]
+        },
+        {
+            "name": "VehicleLightStatus",
+            "type": "bitflags",
+            "comment": "Vehicle light damage status flags.",
+            "items": [
+                {
+                    "name": "VehicleLightStatusNone",
+                    "value": 0
+                },
+                {
+                    "name": "VehicleLightStatusFrontLeftBroken",
+                    "value": 1
+                },
+                {
+                    "name": "VehicleLightStatusFrontRightBroken",
+                    "value": 4
+                },
+                {
+                    "name": "VehicleLightStatusRearBroken",
+                    "value": 64
+                }
+            ]
+        },
+        {
+            "name": "VehicleTyreStatus",
+            "type": "bitflags",
+            "comment": "Vehicle tyre damage status flags.",
+            "items": [
+                {
+                    "name": "VehicleTyreStatusNone",
+                    "value": 0
+                },
+                {
+                    "name": "VehicleTyreStatusFrontLeftPopped",
+                    "value": 8
+                },
+                {
+                    "name": "VehicleTyreStatusFrontRightPopped",
+                    "value": 2
+                },
+                {
+                    "name": "VehicleTyreStatusRearLeftPopped",
+                    "value": 4
+                },
+                {
+                    "name": "VehicleTyreStatusRearRightPopped",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "LandingGearState",
+            "type": "enum",
+            "comment": "Aircraft landing gear states.",
+            "items": [
+                {
+                    "name": "LandingGearStateDown",
+                    "value": 0
+                },
+                {
+                    "name": "LandingGearStateUp",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "VehicleParam",
+            "type": "enum",
+            "comment": "Vehicle parameter state values.",
+            "items": [
+                {
+                    "name": "VehicleParamUnset",
+                    "value": -1
+                },
+                {
+                    "name": "VehicleParamOff",
+                    "value": 0
+                },
+                {
+                    "name": "VehicleParamOn",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "ConnectionStatus",
+            "type": "enum",
+            "comment": "Network connection status values.",
+            "items": [
+                {
+                    "name": "ConnectionStatusUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "ConnectionStatusNoAction",
+                    "value": 0
+                },
+                {
+                    "name": "ConnectionStatusDisconnectASAP",
+                    "value": 1
+                },
+                {
+                    "name": "ConnectionStatusDisconnectASAPSilently",
+                    "value": 2
+                },
+                {
+                    "name": "ConnectionStatusDisconnectOnNoAck",
+                    "value": 3
+                },
+                {
+                    "name": "ConnectionStatusRequestedConnection",
+                    "value": 4
+                },
+                {
+                    "name": "ConnectionStatusHandlingConnectionRequest",
+                    "value": 5
+                },
+                {
+                    "name": "ConnectionStatusUnverifiedSender",
+                    "value": 6
+                },
+                {
+                    "name": "ConnectionStatusSetEncryptionOnMultiple16BytePacket",
+                    "value": 7
+                },
+                {
+                    "name": "ConnectionStatusConnected",
+                    "value": 8
+                }
+            ]
+        },
+        {
+            "name": "DownloadRequest",
+            "type": "enum",
+            "comment": "Download request types.",
+            "items": [
+                {
+                    "name": "DownloadRequestUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "DownloadRequestEmpty",
+                    "value": 0
+                },
+                {
+                    "name": "DownloadRequestModelFile",
+                    "value": 1
+                },
+                {
+                    "name": "DownloadRequestTextureFile",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "name": "HttpMethod",
+            "type": "enum",
+            "comment": "HTTP request methods.",
+            "items": [
+                {
+                    "name": "HttpMethodUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "HttpGet",
+                    "value": 1
+                },
+                {
+                    "name": "HttpPost",
+                    "value": 2
+                },
+                {
+                    "name": "HttpHead",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "name": "HttpError",
+            "type": "enum",
+            "comment": "HTTP error response codes.",
+            "items": [
+                {
+                    "name": "HttpErrorUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "HttpErrorBadHost",
+                    "value": 1
+                },
+                {
+                    "name": "HttpErrorNoSocket",
+                    "value": 2
+                },
+                {
+                    "name": "HttpErrorCantConnect",
+                    "value": 3
+                },
+                {
+                    "name": "HttpErrorCantWrite",
+                    "value": 4
+                },
+                {
+                    "name": "HttpErrorContentTooBig",
+                    "value": 5
+                },
+                {
+                    "name": "HttpErrorMalformedResponse",
+                    "value": 6
+                }
+            ]
+        },
+        {
+            "name": "VarType",
+            "type": "enum",
+            "comment": "Server/player variable types.",
+            "items": [
+                {
+                    "name": "VarTypeUnknown",
+                    "value": -1
+                },
+                {
+                    "name": "VarTypeNone",
+                    "value": 0
+                },
+                {
+                    "name": "VarTypeInt",
+                    "value": 1
+                },
+                {
+                    "name": "VarTypeString",
+                    "value": 2
+                },
+                {
+                    "name": "VarTypeFloat",
+                    "value": 3
+                }
+            ]
+        }
+    ]
+}

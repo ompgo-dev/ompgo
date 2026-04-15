@@ -1,0 +1,41 @@
+package main
+
+import (
+	"context"
+
+	"github.com/ompgo-dev/ompgo/pkg/omp"
+	"github.com/ompgo-dev/ompgo/pkg/omp/players"
+	"github.com/ompgo-dev/ompgo/pkg/runtime"
+)
+
+import "C"
+
+type {{.TypeName}} struct {
+	omp.BaseEventHandler
+}
+
+func (gm *{{.TypeName}}) OnLoad(ctx context.Context) error {
+	// Called when server is ready
+	return nil
+}
+
+func (gm *{{.TypeName}}) OnPlayerConnect(ctx context.Context, event *omp.PlayerConnectEvent) error {
+	if event.Player == nil || !event.Player.Valid() {
+		return nil
+	}
+	_ = players.SendClientMessage(event.Player, uint32(omp.ColorGreen), "Welcome!")
+	return nil
+}
+
+func NewGamemode() runtime.Gamemode {
+	return &{{.TypeName}}{}
+}
+
+func init() {
+	runtime.Bootstrap(
+		runtime.WithComponentName("ompgo_{{.Name}}"),
+		runtime.WithGamemode(NewGamemode),
+	)
+}
+
+func main() {}

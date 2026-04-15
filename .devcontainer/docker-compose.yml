@@ -1,0 +1,4 @@
+services:
+  vscode:
+    build: .
+    network_mode: host

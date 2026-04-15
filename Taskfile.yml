@@ -1,0 +1,85 @@
+version: "3"
+
+vars:
+  BUILD_DIR: "{{.ROOT_DIR}}/build"
+  PKG_DIR: "{{.ROOT_DIR}}/pkg"
+
+tasks:
+  default:
+    desc: Show available tasks
+    cmds:
+      - task --list
+
+  # Create build directory
+  prepare:
+    desc: Create build directory
+    cmds:
+      - mkdir -p {{.BUILD_DIR}}
+    status:
+      - test -d {{.BUILD_DIR}}
+
+  # Build freeroam component
+  build:freeroam:
+    desc: Build freeroam component
+    deps: [prepare]
+    cmds:
+      - |
+        echo "Building freeroam component..."
+        mkdir -p {{.BUILD_DIR}}/components
+        CGO_ENABLED=1 go build -buildmode=c-shared -o {{.BUILD_DIR}}/components/ompgo_freeroam.so ./examples/freeroam
+        cp {{.BUILD_DIR}}/components/ompgo_freeroam.so {{.ROOT_DIR}}/test-server/Server/components/omgo_freeroam.so
+        echo "Freeroam component built: {{.BUILD_DIR}}/components/ompgo_freeroam.so"
+    sources:
+      - "{{.ROOT_DIR}}/examples/freeroam/*.go"
+      - "{{.PKG_DIR}}/runtime/*.go"
+      - "{{.PKG_DIR}}/gamemode/*.go"
+    generates:
+      - "{{.BUILD_DIR}}/components/ompgo_freeroam.so"
+
+  # Clean build artifacts
+  clean:
+    desc: Remove all build artifacts
+    cmds:
+      - rm -rf {{.BUILD_DIR}}
+      - echo "Build directory cleaned."
+
+  sync:openmp-capi:
+    desc: Refresh committed openmp-capi snapshots from the local submodule
+    cmds:
+      - |
+        set -eu
+        src="{{.ROOT_DIR}}/third_party/openmp-capi"
+        api_dst="{{.ROOT_DIR}}/tools/codegen/data/openmp-capi"
+        header_dst="{{.ROOT_DIR}}/pkg/runtime/include"
+
+        if [ ! -f "$src/apidocs/api.json" ]; then
+          echo "openmp-capi submodule is not initialized at $src"
+          echo "Run: git submodule update --init third_party/openmp-capi"
+          exit 1
+        fi
+
+        mkdir -p "$api_dst" "$header_dst"
+
+        cp "$src/apidocs/api.json" "$api_dst/api.json"
+        cp "$src/apidocs/events.json" "$api_dst/events.json"
+        cp "$src/include/ompcapi.h" "$header_dst/ompcapi.h"
+
+        echo "openmp-capi snapshots refreshed from $src"
+
+  update:openmp-capi:
+    desc: Update the upstream openmp-capi submodule and refresh committed snapshots
+    cmds:
+      - git submodule update --init --remote third_party/openmp-capi
+      - task sync:openmp-capi
+
+  # Generate SDK
+  generate:
+    desc: Generate SDK from C API
+    cmds:
+      - |
+        go run ./tools/codegen \
+          -api {{.ROOT_DIR}}/tools/codegen/data/openmp-capi/api.json \
+          -events {{.ROOT_DIR}}/tools/codegen/data/openmp-capi/events.json \
+          -out {{.ROOT_DIR}}/pkg/omp
+        echo "Code generation complete!"
+        echo "Generated files in pkg/omp/"

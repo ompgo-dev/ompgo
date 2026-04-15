@@ -1,0 +1,77 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+coverage.out
+coverage.html
+
+# Dependency directories
+vendor/
+
+# Go workspace file
+go.work
+
+# Build artifacts
+build/
+dist/
+bin/
+*.a
+*.o
+*.h
+!pkg/runtime/include/ompcapi.h
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment files
+.env
+.env.local
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+test-server/
+component-test/
+
+# Log files
+*.log
+
+# Compiled gamemodes
+gamemodes/*.so
+!gamemodes/.gitkeep
+
+# Task runner files
+.task/
+
+# Debug files
+__debug_bin
+debug
+
+# Profiling data
+*.prof
+*.pprof
+
+# Generated files (uncomment if you want to ignore generated code)
+# pkg/omp/*_gen.go
+
+# OS specific
+Thumbs.db
+ehthumbs.db
+
+# Development artifacts
+*.local
+local/
