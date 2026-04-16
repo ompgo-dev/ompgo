@@ -31,3 +31,7 @@ Examples
 - [examples/events/main.go](examples/events/main.go)
 - [examples/freeroam/main.go](examples/freeroam/main.go)
 - [examples/grandlarc/main.go](examples/grandlarc/main.go)
+
+Packages
+  - [ompgo-streamer](https://github.com/ompgo-dev/ompgo-streamer) - Recreates the streamer plugin using ompgo
+  - [ompgo-extras](https://github.com/ompgo-dev/ompgo-extras) - A bunch of helper packages for common gamemode workflows. (command and dialog routers, and textdraw builder)
